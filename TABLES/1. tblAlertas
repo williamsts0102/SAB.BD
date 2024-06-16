@@ -1,13 +1,13 @@
 CREATE TABLE tblAlerta (
     intIdAlerta INTEGER PRIMARY KEY IDENTITY(1,1),
-    strCodAlerta INTEGER,
+    strCodAlerta VARCHAR(20) UNIQUE,
     strDepartamento VARCHAR(20),
     strProvincia VARCHAR(20),
     strDistrito VARCHAR(20),
     strDireccion VARCHAR(50),
     strLatitud VARCHAR(200),
     strLongitud VARCHAR(200),
-	strDescripcion VARCHAR(200),
+    strDescripcion VARCHAR(200),
     bitEstado BIT,
     bitActivo BIT,
     bitEliminado BIT,
@@ -17,4 +17,4 @@ CREATE TABLE tblAlerta (
     dtmFechaModificacion DATETIME,
     intIdUsuarioEliminacion INTEGER,
     dtmFechaEliminacion DATETIME
-);/**/
+);
