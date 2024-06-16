@@ -110,7 +110,15 @@ BEGIN
             SELECT @ultimoId = ISNULL(MAX(intIdAlerta), 0) FROM tblAlerta;
 
             -- Generación del nuevo código de alerta
-            SET @nuevoCodigo = 'CODIGOALERTA' + RIGHT('00000000' + CAST(@ultimoId + 1 AS VARCHAR), 12);
+			DECLARE @numeroAlerta VARCHAR(20);
+			SET @numeroAlerta = CAST(@ultimoId + 1 AS VARCHAR);
+
+			-- Calcular cuántos ceros se necesitan
+			DECLARE @ceros VARCHAR(20);
+			SET @ceros = REPLICATE('0', 20 - LEN('CODIGOALERTA') - LEN(@numeroAlerta));
+
+			-- Formar el nuevo código de alerta
+			SET @nuevoCodigo = 'CODIGOALERTA' + @ceros + @numeroAlerta;
 
             INSERT INTO tblAlerta (
                 strCodAlerta,
