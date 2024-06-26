@@ -18,3 +18,8 @@ CREATE TABLE tblAlerta (
     intIdUsuarioEliminacion INTEGER,
     dtmFechaEliminacion DATETIME
 );
+
+//alterar tabla tblAlerta para agregar el id de grupopersonal
+ALTER TABLE tblAlerta
+ADD intIdGrupoPersonal INTEGER,
+FOREIGN KEY (intIdGrupoPersonal) REFERENCES tblGrupoPersonal(intIdGrupoPersonal);

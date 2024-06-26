@@ -10,9 +10,11 @@
 --     strDepartamento: Departamento de la alerta.
 --     strProvincia: Provincia de la alerta.
 --     strDistrito: Distrito de la alerta.
+--     strDireccion: Direccion de la alerta.
 --     strDescripcion: Descripción de la alerta.
 --     strLatitud: Latitud de la alerta.
 --     strLongitud: Longitud de la alerta.
+--     intIdGrupoPersonal: Id del grupo personal de la alerta.
 --     bitEstado: Estado de la alerta (1 = Activa, 0 = Inactiva).
 -- NOTAS:
 --     - Si no se encuentra el código de alerta, retorna NULL en los campos.
@@ -31,9 +33,11 @@ BEGIN
         strDepartamento,
         strProvincia,
         strDistrito,
+        strDireccion,
         strDescripcion,
         strLatitud,
         strLongitud,
+        intIdGrupoPersonal,
         bitEstado
     FROM tblAlerta
     WHERE strCodAlerta = @pstrCodAlerta;

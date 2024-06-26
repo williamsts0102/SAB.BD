@@ -23,9 +23,11 @@ BEGIN
         strDepartamento,
         strProvincia,
         strDistrito,
+        strDireccion,
         strDescripcion,
         strLatitud,
         strLongitud,
+        intIdGrupoPersonal,
         bitEstado
     FROM
         tblAlerta
