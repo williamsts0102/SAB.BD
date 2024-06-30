@@ -3,3 +3,10 @@ o cancelar, este proceso se puede realizar solo una vez.
 2.En el detalle de la vista alerta se listara un maestro de grupos.
 3.Si se le asigna un grupo a la alerta, saldra asignado a tal grupo y el
 select de alerta y el boton de asignar y eliminar desapareceran.
+
+
+Instruccion:
+-Crear la bd con el nombre SABDB.
+-Luego ejecutar las tablas desde el numero 3 hacia atras.
+-En las tablas que tengan alter table como por ejemplo la 1, despues
+de crear la tabla ejecutar el alter.
