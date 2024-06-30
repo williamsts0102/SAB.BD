@@ -10,3 +10,4 @@ Instruccion:
 -Luego ejecutar las tablas desde el numero 3 hacia atras.
 -En las tablas que tengan alter table como por ejemplo la 1, despues
 de crear la tabla ejecutar el alter.
+-Despues de crear las tablas ejecutar los sp.
