@@ -32,8 +32,8 @@ INSERT INTO tblPersonal (
     'Incas 342 Independencia',
     '123456789',
     'williams.toro@example.com',
-    '12345678',
-    '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 
+    '',
+    '', 
     1, -- bitEstado: activo
     1, -- bitActivo: activo
     0, -- bitEliminado: no eliminado
@@ -41,20 +41,15 @@ INSERT INTO tblPersonal (
     GETDATE() -- dtmFechaRegistro: fecha actual
 );
 
--- Obtener el ID del personal recién registrado
-DECLARE @PersonalId INT;
-SELECT @PersonalId = SCOPE_IDENTITY();
-
 -- Registrar el usuario relacionado con el personal
 INSERT INTO tblUsuario (
-    strUsername, strPassword, bitActivo, bitEliminado, intIdPersonal, 
-    intIdUsuarioRegistro, dtmFechaRegistro
+    strUsuario, strContrasena,bitEstado, bitActivo, bitEliminado, intIdPersonal, dtmFechaRegistro
 ) VALUES (
     '12345678', 
     '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 
+    1,
     1, -- bitActivo: activo
     0, -- bitEliminado: no eliminado
-    @PersonalId,
-    1, -- intIdUsuarioRegistro: ID del usuario que está registrando este usuario
+    6,
     GETDATE() -- dtmFechaRegistro: fecha actual
 );
