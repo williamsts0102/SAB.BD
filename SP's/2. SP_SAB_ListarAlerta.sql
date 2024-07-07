@@ -32,5 +32,8 @@ BEGIN
     FROM
         tblAlerta
     WHERE
-        bitEliminado = 0;  -- Considerando que bitEliminado = 0 significa que la alerta no está eliminada
+        bitEliminado = 0  -- Considerando que bitEliminado = 0 significa que la alerta no está eliminada
+    ORDER BY
+        strCodAlerta DESC;  -- Ordenar de forma descendente por el campo strCodAlerta
 END;
+
